@@ -20,7 +20,6 @@ namespace WindowsFormsApp1
             }
             base.Dispose(disposing);
         }
-
         #region Код, автоматически созданный конструктором форм Windows
 
         /// <summary>
@@ -29,40 +28,22 @@ namespace WindowsFormsApp1
         /// </summary>
         private void InitializeComponent()
         {
-            this.enterPathLabel = new System.Windows.Forms.Label();
-            this.pathEdit = new System.Windows.Forms.TextBox();
-            this.image = new System.Windows.Forms.PictureBox();
+            this.ImageFromFile = new System.Windows.Forms.PictureBox();
             this.recogniseButton = new System.Windows.Forms.Button();
             this.resultLabel = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.image)).BeginInit();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.EnterFile = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.ImageFromFile)).BeginInit();
             this.SuspendLayout();
             // 
-            // enterPathLabel
+            // ImageFromFile
             // 
-            this.enterPathLabel.AutoSize = true;
-            this.enterPathLabel.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.enterPathLabel.Location = new System.Drawing.Point(23, 22);
-            this.enterPathLabel.Name = "enterPathLabel";
-            this.enterPathLabel.Size = new System.Drawing.Size(255, 29);
-            this.enterPathLabel.TabIndex = 0;
-            this.enterPathLabel.Text = "Введите путь к картинке";
-            // 
-            // pathEdit
-            // 
-            this.pathEdit.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.pathEdit.Location = new System.Drawing.Point(282, 14);
-            this.pathEdit.Name = "pathEdit";
-            this.pathEdit.Size = new System.Drawing.Size(353, 37);
-            this.pathEdit.TabIndex = 1;
-            // 
-            // image
-            // 
-            this.image.Location = new System.Drawing.Point(28, 81);
-            this.image.Name = "image";
-            this.image.Size = new System.Drawing.Size(311, 326);
-            this.image.TabIndex = 2;
-            this.image.TabStop = false;
-            this.image.Visible = false;
+            this.ImageFromFile.Location = new System.Drawing.Point(28, 81);
+            this.ImageFromFile.Name = "ImageFromFile";
+            this.ImageFromFile.Size = new System.Drawing.Size(311, 326);
+            this.ImageFromFile.TabIndex = 2;
+            this.ImageFromFile.TabStop = false;
+            this.ImageFromFile.Visible = false;
             // 
             // recogniseButton
             // 
@@ -73,6 +54,7 @@ namespace WindowsFormsApp1
             this.recogniseButton.TabIndex = 3;
             this.recogniseButton.Text = "Распознать";
             this.recogniseButton.UseVisualStyleBackColor = true;
+            this.recogniseButton.Click += new System.EventHandler(this.recogniseButton_Click);
             // 
             // resultLabel
             // 
@@ -83,31 +65,48 @@ namespace WindowsFormsApp1
             this.resultLabel.TabIndex = 4;
             this.resultLabel.Text = "Эмоция: ";
             // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
+            // 
+            // EnterFile
+            // 
+            this.EnterFile.AutoSize = true;
+            this.EnterFile.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.EnterFile.Location = new System.Drawing.Point(28, 14);
+            this.EnterFile.Name = "EnterFile";
+            this.EnterFile.Size = new System.Drawing.Size(181, 39);
+            this.EnterFile.TabIndex = 5;
+            this.EnterFile.Text = "Выберите файл";
+            this.EnterFile.UseVisualStyleBackColor = true;
+            this.EnterFile.Click += new System.EventHandler(this.EnterFile_Click);
+            // 
             // mainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.EnterFile);
             this.Controls.Add(this.resultLabel);
             this.Controls.Add(this.recogniseButton);
-            this.Controls.Add(this.image);
-            this.Controls.Add(this.pathEdit);
-            this.Controls.Add(this.enterPathLabel);
+            this.Controls.Add(this.ImageFromFile);
             this.Name = "mainForm";
             this.Text = "Распознавание эмоции с картики";
-            ((System.ComponentModel.ISupportInitialize)(this.image)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ImageFromFile)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Label enterPathLabel;
-        private System.Windows.Forms.TextBox pathEdit;
-        private System.Windows.Forms.PictureBox image;
+        #region AllComponentsInSystem
+        private System.Windows.Forms.PictureBox ImageFromFile;
         private System.Windows.Forms.Button recogniseButton;
         private System.Windows.Forms.Label resultLabel;
+        #endregion
+
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.Button EnterFile;
     }
 }
 
