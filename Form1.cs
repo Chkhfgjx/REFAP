@@ -50,7 +50,7 @@ namespace WindowsFormsApp1
                 }
             }
             #endregion
-            ImageFromFile.Image 
+            
         }
     }
 }

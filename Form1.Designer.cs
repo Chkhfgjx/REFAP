@@ -103,10 +103,9 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.PictureBox ImageFromFile;
         private System.Windows.Forms.Button recogniseButton;
         private System.Windows.Forms.Label resultLabel;
-        #endregion
-
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.Button EnterFile;
+        #endregion
     }
 }
 
